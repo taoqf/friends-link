@@ -1,0 +1,12 @@
+{
+	"appenders": [{
+		"replaceConsole": true,
+		"type": "console"
+	}, {
+		"level": "WARN",
+		"type": "file",
+		"filename": "./web.log",
+		"maxLogSize": 10240000,
+		"backups": 30
+	}]
+}

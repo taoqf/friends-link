@@ -1,1 +1,1 @@
-# friends-link
+# [友链（北京）信息咨询有限责任公司](http://www.friendslink.com)
