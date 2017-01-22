@@ -1,12 +1,30 @@
 {
-	"appenders": [{
-		"replaceConsole": true,
-		"type": "console"
-	}, {
-		"level": "WARN",
-		"type": "file",
-		"filename": "./web.log",
-		"maxLogSize": 10240000,
-		"backups": 30
-	}]
+	"replaceConsole": true,
+	"appenders": [
+		{
+			"type": "logLevelFilter",
+			"level": "DEBUG",
+			"appender": {
+				"type": "console",
+				"layout": {
+					"type": "pattern",
+					"pattern": "%[ %d %p %c %] - %m"
+				}
+			}
+		},
+		{
+			"type": "logLevelFilter",
+			"level": "WARN",
+			"appender": {
+				"type": "file",
+				"filename": "./web.log",
+				"layout": {
+					"type": "pattern",
+					"pattern": "[ %d %p %c ] - %m"
+				},
+				"maxLogSize": 10240000,
+				"backups": 30
+			}
+		}
+	]
 }

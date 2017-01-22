@@ -10,12 +10,13 @@ import config from './config';
 import router from './router';
 
 (() => {
+	log4js.configure('./log4js.json');
 	process.on('SIGINT', function () {
 		process.nextTick(function () {
 			process.exit(0);
 		});
 	});
-	log4js.configure('./log4js.json');
+	console.warn('Starting http server at port ', config.PORT, '...');
 	let app = express();
 
 	// parse application/x-www-form-urlencoded
@@ -57,9 +58,9 @@ import router from './router';
 
 	try {
 		app.listen(config.PORT);
-		console.log('http server started at port ', config.PORT);
+		console.warn('Http server started at port ', config.PORT);
 	} catch (e) {
-		console.error('create http server at port', config.PORT, 'failed');
+		console.error('Failed starting http server at port', config.PORT);
 		console.error(e);
 	}
 })();

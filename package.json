@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "友链",
   "scripts": {
-    "test": "gulp && node ./dist/main.js"
+    "test": "rm -rf ./web.log && gulp && node ./dist/main.js",
+	"start": "node ./dist/main.js"
   },
   "repository": {
     "type": "git",
