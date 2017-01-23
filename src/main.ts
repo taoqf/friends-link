@@ -8,6 +8,7 @@ import * as serveFavicon from 'serve-favicon';
 import * as errorhandler from 'errorhandler';
 import config from './config';
 import router from './router';
+import wx from './wx-check-signature';
 
 (() => {
 	log4js.configure('./log4js.json');
@@ -43,6 +44,8 @@ import router from './router';
 		saveUninitialized: false,
 		cookie: { secure: true }
 	}));
+
+	app.use(wx);
 
 	app.use(router);
 
