@@ -1,4 +1,4 @@
-#!usr/bin/env node
+#!/usr/bin/env node
 import * as log4js from 'log4js';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
