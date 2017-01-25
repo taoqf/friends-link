@@ -1,6 +1,6 @@
 {
   "name": "friends-link",
-  "version": "1.0.0-beta201701251739",
+  "version": "1.0.0-beta201701251743",
   "description": "友链",
   "scripts": {
     "test": "rm -rf ./web.log && gulp && node ./dist/main.js",
