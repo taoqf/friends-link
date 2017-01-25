@@ -21,7 +21,7 @@ gulp.task('compile-ts', function (cb) {
 });
 
 gulp.task('copy-files', function () {
-	return gulp.src(['./package.json', './typings.json', './readme.md', './config.json', './log4js.json', './favicon.ico', './pages/**'])
+	return gulp.src(['./package.json', './typings.json', './README.md', './config.json', './log4js.json', './favicon.ico', './pages/**'])
 		.pipe(gulpCopy(dest));
 });
 

@@ -1,3 +1,4 @@
+#!usr/bin/env node
 import * as log4js from 'log4js';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
@@ -45,8 +46,6 @@ import wx from './wx-check-signature';
 		cookie: { secure: true }
 	}));
 
-	app.use(wx);
-
 	app.use(router);
 
 	app.use('/', express.static(path.join(__dirname, 'pages')));
@@ -58,6 +57,8 @@ import wx from './wx-check-signature';
 		// only use in development
 		app.use(errorhandler())
 	}
+
+	app.use(wx);
 
 	try {
 		app.listen(config.PORT);
