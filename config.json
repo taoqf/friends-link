@@ -1,7 +1,7 @@
 {
 	"PORT": 8080,
-	"APPID": "wx2e8f977800a3c2b8",
-	"APPSECRET": "c99b4dde849ae0ae58e2026ce5f28f1a",
+	"APPID": "wxe233a66bacbad625",
+	"APPSECRET": "9b59e2cec4a3030f20c7d32d4e8f07c3",
 	"TOKEN": "fd",
 	"PREFIX": "https://api.weixin.qq.com/cgi-bin/",
 	"MPPREFIX": "https://mp.weixin.qq.com/cgi-bin/"

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as log4js from 'log4js';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
@@ -8,7 +9,7 @@ import * as serveFavicon from 'serve-favicon';
 import * as errorhandler from 'errorhandler';
 import config from './config';
 import router from './router';
-import wx from './wx-check-signature';
+// import wx from './wx-check-signature';
 
 (() => {
 	log4js.configure('./log4js.json');
@@ -45,7 +46,7 @@ import wx from './wx-check-signature';
 		cookie: { secure: true }
 	}));
 
-	app.use(wx);
+	// app.use(wx);
 
 	app.use(router);
 

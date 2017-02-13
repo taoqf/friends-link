@@ -9,3 +9,4 @@
 /// <reference path="modules/morgan/index.d.ts" />
 /// <reference path="modules/serve-favicon/index.d.ts" />
 /// <reference path="modules/serve-static/index.d.ts" />
+/// <reference path="modules/uuid/index.d.ts" />

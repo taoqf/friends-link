@@ -1,10 +1,13 @@
 {
   "name": "friends-link",
-  "version": "1.0.0",
+  "version": "1.0.0-dev.20170213160800",
   "description": "友链",
   "scripts": {
     "test": "rm -rf ./web.log && gulp && node ./dist/main.js",
     "start": "node ./dist/main.js"
+  },
+  "bin": {
+    "fl": "./main.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "errorhandler": "^1.5.0",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
     "log4js": "^1.1.0",
@@ -39,6 +43,7 @@
     "morgan": "^1.7.0",
     "serve-favicon": "^2.3.2",
     "serve-static": "^1.11.1",
-    "sha1": "^1.1.1"
+    "sha1": "^1.1.1",
+    "uuid": "^3.0.1"
   }
 }
