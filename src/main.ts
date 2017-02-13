@@ -6,7 +6,6 @@ import * as session from 'express-session';
 import * as path from 'path';
 import * as morgan from 'morgan';
 import * as serveFavicon from 'serve-favicon';
-import * as errorhandler from 'errorhandler';
 import config from './config';
 import router from './router';
 // import wx from './wx-check-signature';
@@ -54,11 +53,6 @@ import router from './router';
 
 	app.use(serveFavicon(__dirname + '/favicon.ico'));
 	app.use(morgan('combined'))
-
-	if (process.env.NODE_ENV === 'development') {
-		// only use in development
-		app.use(errorhandler())
-	}
 
 	try {
 		app.listen(config.PORT);

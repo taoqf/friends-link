@@ -1,6 +1,6 @@
 {
   "name": "friends-link",
-  "version": "1.0.0-dev.201702131737",
+  "version": "1.0.0-beta201702131737",
   "description": "友链",
   "scripts": {
     "test": "rm -rf ./web.log && gulp && node ./dist/main.js",
@@ -26,7 +26,6 @@
   "homepage": "https://github.com/taoqf/friends-link#readme",
   "devDependencies": {
     "del": "^2.2.2",
-    "errorhandler": "^1.5.0",
     "gulp": "^3.9.1",
     "gulp-copy": "^1.0.0",
     "gulp-sequence": "^0.4.6",
