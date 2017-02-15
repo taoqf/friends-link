@@ -5,4 +5,5 @@ export interface IConfig {
 	TOKEN: string;
 	PREFIX: string;
 	MPPREFIX: string;
+	ACAO: string;
 }

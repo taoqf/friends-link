@@ -4,5 +4,6 @@
 	"APPSECRET": "9b59e2cec4a3030f20c7d32d4e8f07c3",
 	"TOKEN": "fd",
 	"PREFIX": "https://api.weixin.qq.com/cgi-bin/",
-	"MPPREFIX": "https://mp.weixin.qq.com/cgi-bin/"
+	"MPPREFIX": "https://mp.weixin.qq.com/cgi-bin/",
+	"ACAO": "http://172.16.12.2:8000"
 }
