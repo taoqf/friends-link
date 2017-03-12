@@ -3,8 +3,9 @@
   "version": "1.0.0-beta201702131737",
   "description": "友链",
   "scripts": {
-    "test": "rm -rf ./web.log && gulp && node ./dist/main.js",
-    "start": "node ./dist/main.js"
+    "test": "node ./dist/main.js",
+    "test1": "rm -rf ./web.log && gulp && node ./dist/main.js",
+    "start": "node ./dist/test.js"
   },
   "bin": {
     "fl": "./main.js"
@@ -39,6 +40,7 @@
     "express-session": "^1.14.2",
     "log4js": "^1.1.0",
     "mime": "^1.3.4",
+    "mongoose": "^4.8.4",
     "morgan": "^1.7.0",
     "serve-favicon": "^2.3.2",
     "serve-static": "^1.11.1",

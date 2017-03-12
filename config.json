@@ -5,5 +5,5 @@
 	"TOKEN": "fd",
 	"PREFIX": "https://api.weixin.qq.com/cgi-bin/",
 	"MPPREFIX": "https://mp.weixin.qq.com/cgi-bin/",
-	"ACAO": "http://172.16.12.2:8000"
+	"ACAO": "http://127.0.0.1:8000"
 }
