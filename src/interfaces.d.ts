@@ -7,3 +7,7 @@ export interface IConfig {
 	MPPREFIX: string;
 	ACAO: string;
 }
+
+export interface Hash<T>{
+	[key: string]: T;
+}

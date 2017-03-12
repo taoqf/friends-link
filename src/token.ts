@@ -19,12 +19,15 @@ function refresh() {
 						errcode: number;
 						errmsg: string;
 					};
-					console.log(parsedData);
+					console.log('token==============', parsedData);
+					console.info(parsedData);
 					if (parsedData.access_token) {
 						token = parsedData.access_token;
 						resolve(token);
-						const timeout = parsedData.expires_in > 0 ? parsedData.expires_in * 1000 - 10000 : 0;
-						setTimeout(refresh, timeout);
+						if (parsedData.expires_in > 0) {
+							const timeout = parsedData.expires_in * 1000 - 10000;
+							setTimeout(refresh, timeout);
+						}
 					} else {
 						reject(parsedData);
 					}
