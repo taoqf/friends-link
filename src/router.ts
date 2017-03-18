@@ -1,7 +1,7 @@
 import * as express from 'express';
 import config from './config';
-import wx from './wx-check-signature';
-import sn from './signature';
+import wx from './wx/wx-check-signature';
+import sn from './wx/signature';
 
 const router = express.Router();
 
@@ -10,7 +10,7 @@ const router = express.Router();
 (function (router: express.Router) {
 	config.ACAO && router.use(function (req, res, next) {
 		res.header("Access-Control-Allow-Origin", config.ACAO);
-		res.header("Access-Control-Allow-Headers", "content-type, x-requested-with");
+		res.header("Access-Control-Allow-Headers", "Origin,Accept,Content-Type,X-Requested-With,If-Modified-Since");
 		res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
 		res.header("Access-Control-Allow-Credentials", "true");
 		// res.header("X-Powered-By", ' 3.2.1')

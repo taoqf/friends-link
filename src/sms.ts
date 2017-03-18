@@ -1,5 +1,5 @@
 import { Hash } from './interfaces';
-import get from './get';
+import { http } from './get';
 
 const APPKEY = 'acbbb8d2f18952bddaf2e235cc8e5b5c';
 
@@ -25,7 +25,7 @@ function send_msg(phone_no: string, tpl_id: string, tpl_value: Hash<string>) {
 		"dtype": "json" // 返回数据的格式,xml或json，默认json
 	}
 	const url = 'http://v.juhe.cn/sms/send';
-	return get(url, params).then((data) => {
+	return http(url, params).then((data) => {
 		return JSON.parse(data) as {
 			error_code: number;
 			result: string;
@@ -40,7 +40,7 @@ function is_black(word: string) {
 		word: word
 	};
 	const url = 'http://v.juhe.cn/sms/black';
-	return get(url, params).then((data) => {
+	return http(url, params).then((data) => {
 		return JSON.parse(data) as {
 			error_code: number;
 			result: string;

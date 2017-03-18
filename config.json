@@ -5,5 +5,5 @@
 	"TOKEN": "fd",
 	"PREFIX": "https://api.weixin.qq.com/cgi-bin/",
 	"MPPREFIX": "https://mp.weixin.qq.com/cgi-bin/",
-	"ACAO": "http://127.0.0.1:8000"
+	"ACAO": "http://weixin.friends-link.com,http://weixin.friends-link.net,http://weixin.f-links.cn,http://weixin.f-links.com.cn,http://weixin.friendslink.cn,http://weixin.friendslink.com.cn,http://weixin.friends-link.cn,http://weixin.friends-link.com.cn"
 }

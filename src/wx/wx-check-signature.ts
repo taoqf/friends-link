@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import * as sha1 from 'sha1';
-import config from './config';
+import config from '../config';
 
 export default (req: Request, res: Response, next: NextFunction) => {
 	const q = req.query;
