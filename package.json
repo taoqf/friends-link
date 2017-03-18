@@ -1,6 +1,6 @@
 {
   "name": "friends-link",
-  "version": "1.0.0-dev.201703181127",
+  "version": "1.0.0-dev.201703181156",
   "description": "友链",
   "scripts": {
     "test": "node ./dist/main.js",
