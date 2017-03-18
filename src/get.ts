@@ -42,7 +42,7 @@ export function https(url: string, data?: any) {
 			const query = querystring.stringify(data);
 			url += "?" + query;
 		}
-		h.get(url, (res) => {
+		hs.get(url, (res) => {
 			const statusCode = res.statusCode;
 			const contentType = res.headers['content-type'];
 
