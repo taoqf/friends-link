@@ -4,6 +4,10 @@ import config from '../config';
 
 export default (req: Request, res: Response, next: NextFunction) => {
 	const code = req.body.code || req.query.code;
+	if (!code) {
+		res.status(500).end('param [code] needed.');
+		return;
+	}
 	return https(`https://api.weixin.qq.com/sns/oauth2/access_token?appid=${config.APPID}&secret=${config.APPSECRET}&code=${code}&grant_type=authorization_code`).then((data) => {
 		const d = JSON.parse(data);
 		const info = d as {
