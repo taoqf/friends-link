@@ -8,7 +8,9 @@ export default (req: Request, res: Response, next: NextFunction) => {
 		res.status(500).end('param [code] needed.');
 		return;
 	}
-	return https(`https://api.weixin.qq.com/sns/oauth2/access_token?appid=${config.APPID}&secret=${config.APPSECRET}&code=${code}&grant_type=authorization_code`).then((data) => {
+	console.log('geting userinfo: code=', code);
+	https(`https://api.weixin.qq.com/sns/oauth2/access_token?appid=${config.APPID}&secret=${config.APPSECRET}&code=${code}&grant_type=authorization_code`).then((data) => {
+		console.log('access_token:', data);
 		const d = JSON.parse(data);
 		const info = d as {
 			access_token: string;
@@ -19,7 +21,8 @@ export default (req: Request, res: Response, next: NextFunction) => {
 			unionid: string;
 		};
 		if (info.openid && info.access_token) {
-			https(`https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN`).then((data) => {
+			https(`https://api.weixin.qq.com/cgi-bin/user/info?access_token=${info.access_token}&openid=${info.openid}&lang=zh_CN`).then((data) => {
+				console.log('userinfo:::', data);
 				const d = JSON.parse(data);
 				const info = d as {
 					subscribe: number;
