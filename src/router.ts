@@ -2,6 +2,7 @@ import * as express from 'express';
 import config from './config';
 import wx from './wx/wx-check-signature';
 import sn from './wx/signature';
+import get_user_info from './wx/get-user-info';
 
 const router = express.Router();
 
@@ -24,5 +25,7 @@ const router = express.Router();
 router.get('/check', wx);
 
 router.get('/sn', sn);
+
+router.get('/get_user_info', get_user_info)
 
 export default router;
